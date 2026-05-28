@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora Lilian Rodas</title>
+    <link rel="icon" type="image/png" href="recursos/img/LACapou.png">
+    <style>
+        /*CSS-Diseño, configutar en cascada(Esto si es un lenguaje de progra)*/  
+        html,body{
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        header{
+            padding: 20px;
+            background-color: lightsteelblue;
+        }
+        main{
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            border-top: 1px solid navy;
+            background-color: beige;
+        }
+        h1{
+             color: white; /* El centro de la letra debe ser claro para que el neón resalte */
+            text-transform: uppercase;
+    
+            /* Efecto Neón Navy */
+            text-shadow: 
+            0 0 5px #fff,        /* Brillo interno blanco */
+            0 0 10px #53537c,    /* Color Navy suave */
+            0 0 20px #ede3b6,    /* Color Navy más extendido */
+            0 0 40px #53537c,    /* El resplandor neón */
+            0 0 80px #53537c;    /* El aura más lejana */
+        }
+        /* 1. Estado inicial del logo */
+        .logo-footer {
+            height: 75px; /* El tamaño que ya tenías */
+            transition: transform 0.3s ease; /* Esto hace que el zoom sea suave y no un salto brusco */
+            cursor: pointer; /* Cambia el cursor a una 'manita' para indicar que es interactivo */
+        }
+
+        /* 2. Efecto cuando el mouse pasa por encima */
+        .logo-footer:hover {
+            transform: scale(1.1); /* 1.1 significa que crecerá un 10% más de su tamaño original */
+        }
+        .semana {
+            background-color: white; /* Fondo limpio */
+            border-radius: 12px;     /* Bordes redondeados para elegancia */
+            padding: 20px;           /* Espacio interno para que el texto no toque los bordes */
+            margin: 20px 0;          /* Espacio entre una tarjeta y otra */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+            border-left: 5px solid navy; /* Una línea decorativa al lado izquierdo */
+            transition: 0.3s;        /* Para que cualquier cambio sea suave */
+            text-align: left;        /* Alineamos el texto a la izquierda para mejor lectura */
+        }
+
+        /* Efecto extra: que la tarjeta se eleve un poquito al pasar el mouse */
+        .semana:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+        .visor-pdf {
+            width: 80%;       /* Ocupa todo el ancho de la tarjeta */
+            height: 400px;     /* Aumentamos la altura para que se lea mejor */
+            border-radius: 8px; /* Bordes redondeados para que combine */
+            border: 1px solid #ddd;
+            margin-top: 15px;
+            display: block; /* Asegura que se comporte como un bloque */
+        }
+
+        .video-bitacora {
+            width: 100%;
+            max-width: 700px; /* Para que coincida con el tamaño de la imagen */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            display: block;
+            margin: 15px auto;
+        }
+
+        .video-contenedor h4 {
+            margin-top: 25px;
+            color: navy;
+        }
+
+        .pie-video {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bitácora Segunda y tercera unidad</h1>
+    </header>
+    <main>
+        <h4>Contenido de la página WEB</h4>
+    <div class="semana">
+    <h3>Semana 1: Introducción Arduino</h3>
+    <p>
+        En esta etapa inicial, exploramos la plataforma <strong>Arduino</strong>, una herramienta de hardware y software libre ideal para el desarrollo de proyectos electrónicos. 
+        Aprendimos sobre sus componentes principales, como el microcontrolador, los pines digitales y analógicos, y la importancia de las señales en la programación física.
+    </p>
+    
+    <!-- Visor de PDF mejorado -->
+    <embed src="recursos/Introducción Arduino (2) 1.pdf" type="application/pdf" class="visor-pdf">
+    
+    <p style="margin-top: 10px;">
+    <a href="recursos/Introducción Arduino (2) 1.pdf" target="_blank">Ver Documento en pantalla completa: Introducción Arduino</a>
+    </p>
+    </div>
+        </embed>
+    
+
+        </div>
+        <div class="semana">
+        <h3>Semana 2: Introducción Robótica</h3>
+        <p>En esta semana aprendimos la introducción a la robótica.</p>
+        <div class="video-contenedor">
+        <h4>Evidencia: Circuito en Funcionamiento</h4>
+        <video controls class="video-bitacora">
+            <source src="recursos/grabación circuito2Li.mp4" type="video/mp4">
+        </video>
+        <p class="pie-video">Demostración del ciclo de encendido de los LEDs (Rojo, Azul, Verde).</p>
+    </div>
+    </div>
+        
+
+        </div>
+        <div class="semana">
+        <h3>Semana 3: </h3>
+        <p>En esta semana continuaremos la siguiente etapa del proyecto</p>
+        </div>
+    </main>
+    <footer>
+        <span>@ximenaroasg</span>
+        <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" class="logo-footer" alt="Logo Colegio" height="75" width="300">
+    </footer>
+    
+        
+        
+</body>
+</html>
